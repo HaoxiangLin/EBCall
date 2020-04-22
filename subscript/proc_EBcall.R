@@ -47,7 +47,7 @@ for (i in 1:nrow(infoData)) {
 	norBases <- as.integer(unlist(strsplit(as.character(norData[i]), ",")));
 	
 	if (pbinom(norBases[2] + norBases[4], norBases[1] + norBases[3], 0.5) < 0.01) {
-		
+		# read count on positive and negative strain of the normal samples
 		derror_p <- rep(0, 2 * ncol(refData));
 		derror_n <- rep(0, 2 * ncol(refData));
 		
